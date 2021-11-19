@@ -1,0 +1,19 @@
+Criar um aplicativo para organizar filmes e séries que deseja assistir posteriormente
+
+Opções:
+    • Adicionar filmes/séries como desejos
+    • Excluir filmes/séries
+    • Marcar como visto, assim sumirá dos desejos e irá para os vistos
+    • Favoritar filmes ou séries
+
+BANCO DE DADOS
+
+Utilizar SQLite3 para criar o banco de dados
+
+
+18/11/2021
+
+
+
+
+Criar o banco de dados e modificar as cores
