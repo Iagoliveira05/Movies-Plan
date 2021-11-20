@@ -5,15 +5,12 @@ Opções:
     • Excluir filmes/séries
     • Marcar como visto, assim sumirá dos desejos e irá para os vistos
     • Favoritar filmes ou séries
+    • Sortear um filme ou série
 
 BANCO DE DADOS
 
 Utilizar SQLite3 para criar o banco de dados
 
 
-18/11/2021
-
-
-
-
-Criar o banco de dados e modificar as cores
+18/11/2021 → Início
+20/11/2021 → Término

@@ -1,11 +1,33 @@
 import sqlite3
+from sqlite3 import Error
+import os
 
-def adicionar(vnome, vtipo):
-    vsql = "INSERT INTO dados VALUES('"+vnome+"', '"+vtipo+"', '', '')"
-    cursor.execute(vsql)
-    banco.commit()
+pastaApp = os.path.dirname(__file__)
+nomeBanco = pastaApp+"\\movies-plan.db"
 
-    banco.close()
+def conexaoBanco():
+    con = None
+    try:
+        con = sqlite3.connect(nomeBanco, timeout=10)
+    except Error as ex:
+        print(ex)
+    return con
 
-banco = sqlite3.connect("movies-plan.db", timeout=10)
-cursor = banco.cursor()
+
+def dql(query):     # select
+    vcon = conexaoBanco()
+    c = vcon.cursor()
+    c.execute(query)
+    res = c.fetchall()
+    vcon.close()
+    return res
+
+def dml(query):     # insert, update, delete
+    try:
+        vcon = conexaoBanco()
+        c = vcon.cursor()
+        c.execute(query)
+        vcon.commit()
+        vcon.close()
+    except Error as ex:
+        print(ex)
